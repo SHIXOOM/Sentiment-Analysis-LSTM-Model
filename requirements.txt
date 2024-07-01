@@ -1,7 +1,6 @@
 uvicorn
 tensorflow
 nltk
-re
 fastapi
 os
 numpy
