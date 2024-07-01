@@ -9,6 +9,7 @@ import re
 import numpy as np
 from fastapi import FastAPI
 import os
+from pydantic import BaseModel
 #import uvicorn
 
 
@@ -47,16 +48,20 @@ def clean(text):
 
   return text
 
+# Define a data model for the prediction request
+class PredictionRequest(BaseModel):
+    text: str
+
 
 @models.get("/")
 def read_root():
     return {"message": "Welcome to the FastAPI Deep Learning Model Server"}
 
 @models.post("/predict/")
-def predict(sentence: str):
+def predict(sentence:  PredictionRequest):
     box = []
     
-    cleaned_sentence = clean(sentence)
+    cleaned_sentence = clean(sentence.text)
     
     box.append(cleaned_sentence)
     

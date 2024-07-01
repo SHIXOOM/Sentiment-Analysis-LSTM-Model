@@ -3,3 +3,4 @@ tensorflow
 nltk
 fastapi
 numpy
+pydantic
