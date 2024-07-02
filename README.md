@@ -1,5 +1,5 @@
 # Sentiment-Analysis-Long-Short-Term-Memory-Model
-This project is mainly a part of another project (check Doctor Diagnosis Chatbot Repository)
+This project is mainly a part of another project [Doctor Diagnosis Chatbot](https://github.com/SHIXOOM/Doctor-Diagnosis-ChatBot)
 
 # Libraris Used in Development
 -Keras
